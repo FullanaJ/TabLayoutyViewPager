@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link Tab1#newInstance} factory method to
- * create an instance of this fragment.
+ * Clase Tab1 que extiende de Fragment
+ * Representa el contenido del primer tab
+ * @author Jorge Fullana Estela
+ * @version 1.0.0
+ * @see Fragment subclase.
  */
 public class Tab1 extends Fragment {
 
@@ -29,12 +31,12 @@ public class Tab1 extends Fragment {
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * Utiliza este método de fábrica para crear una nueva instancia de
+     * este fragmento utilizando los parámetros proporcionados.
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Tab1.
+     * @param param1 Parámetro 1.
+     * @param param2 Parámetro 2.
+     * @return Una nueva instancia del fragmento Tab1.
      */
     // TODO: Rename and change types and number of parameters
     public static Tab1 newInstance(String param1, String param2) {
@@ -46,6 +48,9 @@ public class Tab1 extends Fragment {
         return fragment;
     }
 
+    /**
+     * Metodo void que se ejecutará cuando se cree el fragmento
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,18 @@ public class Tab1 extends Fragment {
         }
     }
 
+    /**
+     *
+     * @param inflater: El objeto LayoutInflater que se puede utilizar para inflar
+     * cualquier vista en el fragmento.
+     * @param container: Si no es nulo, este es el vista principal a la que el
+     * UI del fragmento debería estar adjunto. El fragmento no debe añadir la vista
+     * por sí mismo, pero esto se puede utilizar para generar los LayoutParams de la vista.
+     * @param savedInstanceState: Si no es nulo, este fragmento se está reconstruyendo
+     * a partir de un estado guardado previamente, como se indica aquí.
+     *
+     * @return View: Devuelve la vista que se va a mostrar en el fragmento.
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

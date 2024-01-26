@@ -11,18 +11,38 @@ import android.widget.TableLayout;
 
 import com.google.android.material.tabs.TabLayout;
 
+/**
+ * @author Jorge Fullana Estela
+ * @version 1.0.0
+ * @see AppCompatActivity subclase.
+ * @see TabLayout subclase. se utiliza para crear los tabs
+ * @see FragmentContainerView subclase. se utiliza para crear el contenedor de los fragments
+ * @see FragmentManager subclase. se utiliza para gestionar los fragments
+ * @see com.google.android.material.tabs.TabLayout.OnTabSelectedListener subclase. se utiliza para animar los tabs
+ */
 public class MainActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     FragmentContainerView containerView;
     FragmentManager fragmentManager;
+
+    /**
+     * Metodo que se ejecuta al crear la actividad
+     * @param savedInstanceState estado de la instancia
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    @Override
+    /**
+     * Inicializacion de los componentes de la vista
+     * y la logica de los tabs
+     * @param savedInstanceState estado de la instancia
+     *
+     */
+     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         tabLayout = findViewById(R.id.tabLayout);
